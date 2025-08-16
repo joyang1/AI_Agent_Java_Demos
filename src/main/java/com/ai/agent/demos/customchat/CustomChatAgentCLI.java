@@ -86,7 +86,7 @@ public class CustomChatAgentCLI {
      */
     private static void withFunctionCall_Manual() {
         CustomChatAgentCLI chatAgentCLI = new CustomChatAgentCLI("qwen3:1.7b");
-        ChatMessage chatMessage = UserMessage.from("杭州市今天天气多少度/nothink");
+        ChatMessage chatMessage = UserMessage.from("上海市今天天气多少度/nothink");
         ChatMessage systemMessage = SystemMessage.from(PromptUtils.getFunctionCallPrompt());
 
         ChatRequest request = ChatRequest.builder()
