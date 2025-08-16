@@ -30,6 +30,10 @@
 		<java.version>17</java.version>
 		<springboot.version>3.4.5</springboot.version>
 		<langchain4j.version>1.0.0-rc1</langchain4j.version>
+		<langchain4j.ollama.version>1.0.0-beta4</langchain4j.ollama.version>
+		<google.guava.version>33.4.8-jre</google.guava.version>
+		<fastjson.version>2.0.58</fastjson.version>
+		<okhttp3.version>4.12.0</okhttp3.version>
 	</properties>
 	<dependencies>
 		<!-- springboot start -->
@@ -67,7 +71,7 @@
 		<dependency>
 			<groupId>dev.langchain4j</groupId>
 			<artifactId>langchain4j-ollama-spring-boot-starter</artifactId>
-			<version>1.0.0-beta4</version>
+			<version>${langchain4j.ollama.version}</version>
 		</dependency>
 
 		<dependency>
@@ -75,6 +79,26 @@
 			<artifactId>langchain4j-community-dashscope-spring-boot-starter</artifactId>
 		</dependency>
 		<!-- langchain4j end -->
+
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${google.guava.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>${okhttp3.version}</version>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
