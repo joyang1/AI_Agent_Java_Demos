@@ -2,15 +2,9 @@ package com.ai.agent.demos.customchat;
 
 import com.ai.agent.demos.customchat.handler.ChatHandler;
 import com.ai.agent.demos.enums.ChatTypeEnum;
-import dev.langchain4j.data.message.ChatMessage;
-import dev.langchain4j.data.message.SystemMessage;
-import dev.langchain4j.data.message.UserMessage;
-import dev.langchain4j.model.chat.ChatModel;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.Map;
 
 /**

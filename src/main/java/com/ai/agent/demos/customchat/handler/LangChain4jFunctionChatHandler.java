@@ -38,6 +38,9 @@ public class LangChain4jFunctionChatHandler implements ChatHandler {
     final ChatModel chatModel;
 
     @Autowired
+    private WeatherExecutor weatherExecutor;
+
+    @Autowired
     private LangChain4jFunctionCallBackService langChain4jFunctionCallBackService;
 
     @Override
@@ -103,7 +106,7 @@ public class LangChain4jFunctionChatHandler implements ChatHandler {
         // 构建工具映射表，将天气查询工具规范与对应的执行器进行映射
         Map<ToolSpecification, ToolExecutor> ToolMap = Map.of(
                 WeatherQueryTools.getWeatherQueryTool(),
-                new WeatherExecutor()
+                weatherExecutor
         );
 
         // 借助AiServices自动执行工具调用
