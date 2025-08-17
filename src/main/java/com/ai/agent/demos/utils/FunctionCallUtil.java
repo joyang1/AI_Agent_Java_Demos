@@ -24,7 +24,7 @@ public class FunctionCallUtil {
             JSONObject argMap = JSONObject.parseObject(request.arguments());
             String cityName = argMap.get("city").toString();
             //TODO 此处设置高德key
-            String key = "";
+            String key = "cc4381013d41b46fc83cbfcaea498f40";
             String queryUrl = String.format(weatherQueryUrl, key, cityName);
             String weatherString = SimpleOkHttpClient.sendGetRequest(queryUrl);
             return ToolExecutionResultMessage

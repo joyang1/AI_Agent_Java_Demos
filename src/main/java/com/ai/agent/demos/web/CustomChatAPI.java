@@ -1,6 +1,9 @@
 package com.ai.agent.demos.web;
 
 import com.ai.agent.demos.customchat.CustomChatAgent;
+import com.ai.agent.demos.enums.ChatTypeEnum;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,14 +21,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CustomChatAPI {
 
+    private static final Logger logger = LoggerFactory.getLogger(CustomChatAPI.class);
+
     @Autowired
     private CustomChatAgent customChatAgent;
 
     @GetMapping("/chat")
-    public String chat(@RequestParam(value = "message") String message) {
-
-        String response = customChatAgent.chat(message);
-        System.out.println("response:\n" + response);
+    public String chat(@RequestParam(value = "message") String message, @RequestParam(value = "type") String type) {
+        String response = customChatAgent.chat(message, ChatTypeEnum.getByType(type));
+        logger.info("chat response: {}", response);
         return response;
     }
 
