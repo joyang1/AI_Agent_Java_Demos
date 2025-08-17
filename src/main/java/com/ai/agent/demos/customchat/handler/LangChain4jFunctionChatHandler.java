@@ -93,7 +93,7 @@ public class LangChain4jFunctionChatHandler implements ChatHandler {
         return aiMessage.text();
     }
 
-        /**
+    /**
      * 自动执行函数调用并获取上海天气信息
      *
      * @param message 输入的消息内容，用于传递查询参数
@@ -114,8 +114,6 @@ public class LangChain4jFunctionChatHandler implements ChatHandler {
                 .build()
                 .chat(message);
     }
-
-
 
     @Override
     public String type() {
