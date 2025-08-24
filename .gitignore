@@ -25,4 +25,5 @@ replay_pid*
 
 # project
 .idea
+/logs
 Test*.java
