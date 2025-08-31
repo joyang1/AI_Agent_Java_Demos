@@ -11,8 +11,9 @@ import lombok.Getter;
  */
 @Getter
 public enum ChatTypeEnum {
-    SIMPLE("simple", "简单对话"),
-    FUNCTION_CALL("functionCall", "使用工具调用对话"),
+    SIMPLE("simple", "langChain4j简单对话"),
+    LANG_CHAIN_4J("langChain4j", "langChain4j对话"),
+    SPRING_AI("springAI", "springAI对话"),
     ;
 
     private final String type;

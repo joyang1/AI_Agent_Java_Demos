@@ -32,7 +32,7 @@ import java.util.Map;
  * @Email tingzai.yang@gmail.com
  * @FileName FunctionChatHandler.java
  */
-@Component("functionCall")
+@Component("langChain4j")
 @RequiredArgsConstructor
 public class LangChain4jFunctionChatHandler implements ChatHandler {
 
@@ -121,6 +121,6 @@ public class LangChain4jFunctionChatHandler implements ChatHandler {
 
     @Override
     public String type() {
-        return ChatTypeEnum.FUNCTION_CALL.getType();
+        return ChatTypeEnum.LANG_CHAIN_4J.getType();
     }
 }

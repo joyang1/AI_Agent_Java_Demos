@@ -6,8 +6,18 @@ langchain4j:
 ##        model-name: qwen-max
 ##        model-name: qwen-plus
 #        model-name: qwen-max-latest
-
   ollama:
     chat-model:
       base-url: http://127.0.0.1:11434
       model-name: qwen3:1.7b
+
+#spring:
+#  main:
+#    allow-bean-definition-overriding: true
+#  ai:
+#    ollama:
+#      base-url: http://localhost:11434
+#      chat:
+#        options:
+#          model: qwen3:1.7b
+#          temperature: 0.7

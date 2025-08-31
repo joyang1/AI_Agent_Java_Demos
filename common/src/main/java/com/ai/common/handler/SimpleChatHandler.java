@@ -26,7 +26,7 @@ public class SimpleChatHandler implements ChatHandler {
     @Override
     public String chat(String message) {
         List<ChatMessage> messages = List.of(
-                SystemMessage.systemMessage("现在你是篮球明星詹姆斯，接下来请使用詹姆斯的语气跟我对话"),
+                SystemMessage.systemMessage("现在你是篮球明星**勒布朗詹姆斯**，接下来请使用詹姆斯的语气跟我对话"),
                 UserMessage.userMessage(message));
         return chatModel.chat(messages).aiMessage().text();
     }
