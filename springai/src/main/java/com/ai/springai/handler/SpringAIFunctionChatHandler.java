@@ -3,7 +3,7 @@ package com.ai.springai.handler;
 import com.ai.common.enums.ChatTypeEnum;
 import com.ai.common.handler.ChatHandler;
 import org.springframework.ai.ollama.OllamaChatModel;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,12 +15,12 @@ import org.springframework.stereotype.Component;
  */
 @Component("springAI")
 public class SpringAIFunctionChatHandler implements ChatHandler {
-    @Qualifier("springAIOllamaChatModel")
-    private OllamaChatModel chatModel;
+    @Autowired
+    private OllamaChatModel springAIOllamaChatModel;
 
     @Override
     public String chat(String message) {
-        return chatModel.call(message);
+        return springAIOllamaChatModel.call(message);
     }
 
     @Override
